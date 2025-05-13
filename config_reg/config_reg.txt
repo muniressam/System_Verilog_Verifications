@@ -1,0 +1,290 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /config_reg_tb/DUT
+=== Design Unit: work.config_reg
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         76        76         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /config_reg_tb/DUT --
+
+                                              Node      1H->0L      0L->1H                          "Coverage"
+                                              ---------------------------------------------------------------
+                                      address[0-2]           1           1                              100.00 
+                                               clk           1           1                              100.00 
+                                     data_in[0-15]           1           1                              100.00 
+                                    data_out[15-0]           1           1                              100.00 
+                                             reset           1           1                              100.00 
+                                             write           1           1                              100.00 
+
+Total Node Count     =         38 
+Toggled Node Count   =         38 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (76 of 76 bins)
+
+=================================================================================
+=== Instance: /config_reg_tb
+=== Design Unit: work.config_reg_tb
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10         7         3    70.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /config_reg_tb
+NOTE: The modification timestamp for source file 'config_reg_tb.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File config_reg_tb.sv
+------------------------------------IF Branch------------------------------------
+    63                                        10     Count coming in to IF
+    63              1                    ***0***             write =1;
+    72              1                         10             data_in = 10;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    73                                        10     Count coming in to IF
+    73              1                          7             address = amp_gain;
+                                               3     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    84                                        10     Count coming in to IF
+    84              1                         10                 //data_in = $random();
+    90              1                    ***0***             assert_reset;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    85                                        10     Count coming in to IF
+    85              1                    ***0***                 //address = config_reg_e'($random());
+    87              1                         10                 check_result(reset,write,data_in,address); 
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    107                                       16     Count coming in to IF
+    107             1                          6                 reg_assoc [digital_config] = 16'h1;
+    110             1                         10                     reg_assoc [g_address] = g_data_in;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         1         1    50.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /config_reg_tb --
+NOTE: The modification timestamp for source file 'config_reg_tb.sv' has been altered since compilation.
+
+  File config_reg_tb.sv
+----------------Focused Condition View-------------------
+Line       85 Item    1  (ch_out == data_out)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (ch_out == data_out)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (ch_out == data_out)_0  -                             
+  Row   2:    ***0***  (ch_out == data_out)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       107 Item    1  (check_reset_value == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                Input Term   Covered  Reason for no coverage   Hint
+               -----------  --------  -----------------------  --------------
+  (check_reset_value == 0)         Y
+
+     Rows:       Hits  FEC Target                  Non-masking condition(s)      
+ ---------  ---------  --------------------        -------------------------     
+  Row   1:          1  (check_reset_value == 0)_0  -                             
+  Row   2:          1  (check_reset_value == 0)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      52        42        10    80.76%
+
+================================Statement Details================================
+
+Statement Coverage for instance /config_reg_tb --
+NOTE: The modification timestamp for source file 'config_reg_tb.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File config_reg_tb.sv
+    1                                                module config_reg_tb ();
+    2                                                    typedef enum bit [2:0] { adc0_reg,adc1_reg ,
+    3                                                                   temp_sensor0_reg ,
+    4                                                                   temp_sensor1_reg ,
+    5                                                                   analog_test ,
+    6                                                                   digital_test ,
+    7                                                                   amp_gain ,
+    8                                                                   digital_config } config_reg_e;
+    9                                                
+    10                                                   bit clk;
+    11                                               	bit reset;
+    12                                               	logic write;
+    13                                               	logic [15:0] data_in;
+    14                                               	config_reg_e address;
+    15                                               	logic [15:0] data_out;
+    16                                               
+    17                                                   logic [15:0] reset_assoc [string];
+    18                                                   logic [15:0] reg_assoc [string];
+    19                                               
+    20                                                   integer error_count=0;
+    21                                                   integer correct_count=0;
+    22                                                   integer error_reset=0;
+    23                                                   integer correct_reset=0;
+    24                                               
+    25                                                   config_reg DUT (.*);
+    26                                                   initial begin
+    27              1                          1             forever begin
+    28              1                         25                 #1 clk = ~clk; // Toggle clock every 1 time unit
+    28              2                         24     
+    29                                                       end
+    30                                                   end
+    31                                               
+    32                                                   initial begin
+    33              1                          1             reset_assoc [adc0_reg] = 16'hFFFF;
+    34              1                          1             reset_assoc [adc1_reg] =16'h0;
+    35              1                          1             reset_assoc [temp_sensor0_reg] =16'h0;
+    36              1                          1             reset_assoc [temp_sensor1_reg] =16'h0;
+    37              1                          1             reset_assoc [analog_test] =16'hABCD;
+    38              1                          1             reset_assoc [digital_test] = 16'h0;
+    39              1                          1             reset_assoc [amp_gain] = 16'h0;
+    40              1                          1             reset_assoc [digital_config] = 16'h1;
+    41                                               
+    42              1                          1             write = 0;
+    43              1                          1             data_in = 0;
+    44              1                          1             address = adc0_reg;
+    45                                                       //Reset    
+    46              1                          1             assert_reset;
+    47              1                         10             write =1;
+    48                                                       data_in = 4;
+    49              1                         10             address = adc0_reg;
+    50              1                         10             check_result(reset,write,data_in,address);
+    51              1                         10             write =1;
+    52              1                         10             data_in = 5;
+    53                                                       address = adc1_reg;
+    54              1                          1             check_result(reset,write,data_in,address);
+    55              1                          1             write =1;
+    56              1                          1             data_in = 6;
+    57              1                          1             address = temp_sensor0_reg;
+    58                                                       check_result(reset,write,data_in,address);
+    59                                                       write =1;
+    60                                                       data_in = 7;
+    61                                                       address = temp_sensor1_reg;
+    62                                                       check_result(reset,write,data_in,address);
+    63                                                       write =1;
+    64              1                    ***0***             data_in = 8;
+    65              1                    ***0***             address = analog_test;
+    66              1                    ***0***             check_result(reset,write,data_in,address);
+    67              1                    ***0***             write =1;
+    68              1                    ***0***             data_in = 9;
+    69              1                    ***0***             address = digital_test;
+    70              1                    ***0***             check_result(reset,write,data_in,address);
+    71              1                    ***0***             write =1;
+    72                                                       data_in = 10;
+    73                                                       address = amp_gain;
+    74              1                          7             check_result(reset,write,data_in,address);
+    75                                                       write =1;
+    76                                                       data_in = 11;
+    77              1                         10             address = digital_config;
+    78                                                       check_result(reset,write,data_in,address);
+    79                                                       $display("---------------------------------------------------------------");
+    80                                                       
+    81                                                       for(int i = 0 ; i< address.num ; i++) begin
+    82              1                         10                // reset = $random();
+    83              1                         10                 //write = $random();
+    84                                                           //data_in = $random();
+    85                                                           //address = config_reg_e'($random());
+    86              1                    ***0***                 address = address.first();
+    87                                                           check_result(reset,write,data_in,address); 
+    88              1                         10                 address = address.next();
+    89                                                       end
+    90                                                       assert_reset;
+    91              1                    ***0***             $display("%t:Num of Correct = %0d Num of Error= %0d",$time,correct_count,error_count);
+    92                                                       $display("%t:Num of Correct Reset = %0d Num of Error Reset= %0d",$time,correct_reset,error_reset);
+    93                                                       $stop;
+    94                                               
+    95                                                   end
+    96                                               
+    97              1                          2         task golden_model ( input logic g_rst,g_write, [15:0] g_data_in,config_reg_e g_address,
+    98              1                          2                             output logic [15:0] g_data_out);
+    99              1                          2             if (g_rst) begin
+    100                                                          reg_assoc [adc0_reg] = 16'hFFFF;
+    101                                                          reg_assoc [adc1_reg] =16'h0;
+    102                                                          reg_assoc [temp_sensor0_reg] =16'h0;
+    103                                                          reg_assoc [temp_sensor1_reg] =16'h0;
+    104             1                          2                 reg_assoc [analog_test] =16'hABCD;
+    105             1                          2                 reg_assoc [digital_test] = 16'h0;
+    105             2                         16     
+    106             1                         16                 reg_assoc [amp_gain] = 16'h0;
+    107                                                          reg_assoc [digital_config] = 16'h1;
+    108             1                          6             end else begin
+    109             1                          6                 if (g_write) begin
+    110                                                              reg_assoc [g_address] = g_data_in;
+    111             1                         10                 end
+    112             1                         10             end
+    113             1                         10             g_data_out = reg_assoc[g_address];
+    114                                                  endtask 
+    115             1                         16     
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        334        86       248    25.74%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /config_reg_tb --
+
+                                              Node      1H->0L      0L->1H                          "Coverage"
+                                              ---------------------------------------------------------------
+                                           address               ENUM type       Value       Count 
+                                                                  adc0_reg           0        0.00 
+                                                                  adc1_reg           3      100.00 
+                                                          temp_sensor0_reg           1      100.00 
+                                                          temp_sensor1_reg           0        0.00 
+                                                               analog_test           1      100.00 
+                                                              digital_test           3      100.00 
+                                                                  amp_gain           1      100.00 
+                                                            digital_config           0        0.00 
+                                               clk           1           1                              100.00 
+                               correct_count[0-31]           0           0                                0.00 
+                                  correct_reset[0]           0           1                               50.00 
+                               correct_reset[1-31]           0           0                                0.00 
+                                     data_in[0-15]           1           1                              100.00 
+                                    data_out[0-15]           1           1                              100.00 
+                                  error_count[0-2]           1           1                              100.00 
+                                    error_count[3]           0           1                               50.00 
+                                 error_count[4-31]           0           0                                0.00 
+                                  error_reset[0-2]           0           1                               50.00 
+                                 error_reset[3-31]           0           0                                0.00 
+                                             reset           1           1                              100.00 
+                                             write           1           1                              100.00 
+
+Total Node Count     =        171 
+Toggled Node Count   =         43 
+Untoggled Node Count =        128 
+
+Toggle Coverage      =      25.74% (86 of 334 bins)
+
+
+Total Coverage By Instance (filtered view): 60.07%
+

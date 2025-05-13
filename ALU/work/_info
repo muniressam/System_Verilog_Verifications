@@ -1,0 +1,140 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/ver_diploma/second_assignment_extra/ALU
+T_opt
+!s110 1742415947
+V1o=28fB@a7TBL2aLIXc;[1
+04 6 4 work ALU_TB fast 0
+=1-c8f7501db222-67db284b-92-5290
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vALU_4_bit
+Z3 !s110 1742415946
+!i10b 1
+!s100 F`Y[W>e:FM630FfaX]=9[1
+IXVfO`RA`T82@IZmbEWJ@41
+R1
+w1741006451
+8ALU.v
+FALU.v
+!i122 16
+L0 1 38
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1742415946.000000
+Z7 !s107 ALU_TB.sv|const.sv|ALU.v|
+Z8 !s90 -reportprogress|300|ALU.v|const.sv|ALU_TB.sv|+cover|-covercells|
+!i113 0
+Z9 !s102 +cover -covercells
+Z10 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@a@l@u_4_bit
+XALU_pkg
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R3
+!i10b 1
+!s100 Ohi_86dIfe5I538IWHL[G3
+I^ileQY3kAPoXVWIO21nQ12
+S1
+R1
+w1742415729
+8const.sv
+Fconst.sv
+!i122 16
+Z12 L0 1 0
+V^ileQY3kAPoXVWIO21nQ12
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R2
+n@a@l@u_pkg
+vALU_TB
+R11
+Z13 DXx4 work 7 ALU_pkg 0 22 ^ileQY3kAPoXVWIO21nQ12
+DXx4 work 14 ALU_TB_sv_unit 0 22 ]z=UE0Gi]A=7dWG@aEOTm3
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ^?h45CHo@JPzg@MfoI3BY2
+IeBkV?R:1fOLCMK<4g@2A>3
+!s105 ALU_TB_sv_unit
+S1
+R1
+Z14 w1742415856
+Z15 8ALU_TB.sv
+Z16 FALU_TB.sv
+!i122 16
+L0 2 78
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R2
+n@a@l@u_@t@b
+XALU_TB_sv_unit
+R11
+R13
+R3
+V]z=UE0Gi]A=7dWG@aEOTm3
+r1
+!s85 0
+!i10b 1
+!s100 C_^AAU6bM`<aPc4Ce_LI02
+I]z=UE0Gi]A=7dWG@aEOTm3
+!i103 1
+S1
+R1
+R14
+R15
+R16
+!i122 16
+R12
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R2
+n@a@l@u_@t@b_sv_unit

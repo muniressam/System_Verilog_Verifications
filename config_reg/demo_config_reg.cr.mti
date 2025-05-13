@@ -1,0 +1,8 @@
+C:/intelFPGA/ver_diploma/fourth_assignment/config_reg/config_reg_buggy_questa.svp {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/fourth_assignment/config_reg/config_reg_buggy_questa.svp
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module config_reg
+
+Top level modules:
+	config_reg
+
+} {} {}}

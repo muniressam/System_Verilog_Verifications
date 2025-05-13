@@ -1,0 +1,31 @@
+adc0_reg -- convert the MSB bit 16'th bit to 1.
+
+(data_in = 0002 ----- Expected Behavior =0002 ----- Observed Behavior = 8002)
+
+adc1_reg -- replacement the 8 bits of MSB with 8 bits of LSB and vice versa.
+(data_in = 9988 ----- Expected Behavior =9988 ----- Observed Behavior = 8899   
+ data_in = f000 ----- Expected Behavior =f000 ----- Observed Behavior = 00f0 )
+
+
+temp_sensor0_reg -- multiplication the data with 2
+
+(data_in = 0002 ----- Expected Behavior =0002 ----- Observed Behavior = 0004 )
+
+temp_sensor1_reg -- doesn't reset have the same value of last data that was added to it.
+
+(data_in = 6644 ----- Expected Behavior =6644 ----- Observed Behavior = 6644)   
+
+ (Expected reset =0000 ----- Observed reset = 6644 )
+
+analog_test --- have wrong value when it's reset have 16'hABCC
+(data_in = 0044 ----- Expected Behavior =0044 ----- Observed Behavior = 0044)   
+ (Expected reset = 16'hABCD ----- Observed reset = 16'hABCC )
+
+digital_test -- always have default value = zero (always have reset value 16'h0)
+(data_in = 9988 ----- Expected Behavior =9988 ----- Observed Behavior = 0000 )
+
+amp_gain -- always have default value = 16'hFFFF
+(data_in = 9988 ----- Expected Behavior =9988 ----- Observed Behavior = ffff )
+
+digital_config -- convert the MSB bit 16'th bit to 0.
+(data_in = AA77 ----- Expected Behavior =AA77 ----- Observed Behavior = 2A77 )

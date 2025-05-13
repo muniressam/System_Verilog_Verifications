@@ -1,0 +1,248 @@
+module config_reg_tb ();
+    typedef enum bit [2:0] { adc0_reg,
+                             adc1_reg ,
+                             temp_sensor0_reg ,
+                             temp_sensor1_reg ,
+                             analog_test ,
+                             digital_test ,
+                             amp_gain ,
+                             digital_config } config_reg_e;
+
+    bit clk;
+	bit reset;
+	logic write;
+	logic [15:0] data_in;
+	config_reg_e address;
+	logic [15:0] data_out;
+
+    logic [15:0] data_out_golden;
+
+    logic [15:0] reset_assoc [string];
+    logic [15:0] reg_assoc [string];
+
+    integer error_count=0;
+    integer correct_count=0;
+    integer error_reset=0;
+    integer correct_reset=0;
+
+    config_reg DUT (.*);
+    initial begin
+        forever begin
+            #1 clk = ~clk; // Toggle clock every 1 time unit
+        end
+    end
+
+    initial begin
+        reset_assoc [adc0_reg] = 16'hFFFF;
+        reset_assoc [adc1_reg] =16'h0;
+        reset_assoc [temp_sensor0_reg] =16'h0;
+        reset_assoc [temp_sensor1_reg] =16'h0;
+        reset_assoc [analog_test] =16'hABCD;
+        reset_assoc [digital_test] = 16'h0;
+        reset_assoc [amp_gain] = 16'h0;
+        reset_assoc [digital_config] = 16'h1;
+
+        write = 0;
+        data_in = 0;
+        address = adc0_reg;
+
+
+        //config_reg_1   
+        assert_reset;
+        //config_reg_2
+        $display("------------------adc0_reg--------------------");
+        write = 1;
+        data_in = 16'h0002;
+        address = adc0_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hFFFF;
+        address = adc0_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hAAAA;
+        address = adc0_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h5555;
+        address = adc0_reg;
+        check_result(reset,write,data_in,address);
+        $display("------------------adc1_reg--------------------");
+        write = 1;
+        data_in = 16'h9988;
+        address = adc1_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hF000;
+        address = adc1_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h0008;
+        address = adc1_reg;
+        check_result(reset,write,data_in,address);
+        $display("-------------------temp_sensor0_reg-------------------");
+        write = 1;
+        data_in = 16'h0002;
+        address = temp_sensor0_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h0006;
+        address = temp_sensor0_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h0008;
+        address = temp_sensor0_reg;
+        check_result(reset,write,data_in,address);
+        $display("------------------temp_sensor1_reg--------------------");
+        write = 1;
+        data_in = 16'h6644;
+        address = temp_sensor1_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hAAAA;
+        address = temp_sensor1_reg;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hFFF8;
+        address = temp_sensor1_reg;
+        check_result(reset,write,data_in,address);
+        $display("-------------------analog_test-------------------");
+        write = 1;
+        data_in = 16'h0044;
+        address = analog_test;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h2389;
+        address = analog_test;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h709F;
+        address = analog_test;
+        check_result(reset,write,data_in,address);
+        $display("-------------------digital_test-------------------");
+        write = 1;
+        data_in = 16'h7B0D;
+        address = digital_test;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h9089;
+        address = digital_test;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hFFFF;
+        address = digital_test;
+        check_result(reset,write,data_in,address);
+        $display("------------------amp_gain--------------------");
+        write = 1;
+        data_in = 16'h7B0D;
+        address = amp_gain;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h9089;
+        address = amp_gain;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hFFFF;
+        address = amp_gain;
+        check_result(reset,write,data_in,address);
+        $display("------------------digital_config--------------------");
+        write = 1;
+        data_in = 16'h8089;
+        address = digital_config;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hFFFF;
+        address = digital_config;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'h0008;
+        address = digital_config;
+        check_result(reset,write,data_in,address);
+        write = 1;
+        data_in = 16'hAA77;
+        address = digital_config;
+        check_result(reset,write,data_in,address);
+        $display("--------------------------------------");
+        repeat(10) begin
+            write = $random();
+            data_in = $random();
+            address = address.first();
+            for (int i =0 ;i<address.num ;i++ ) begin
+                check_result(reset,write,data_in,address); 
+                address = address.next();
+                $display("--------------------------------------");
+            end
+        end
+
+        assert_reset;
+        $display("%t:Num of Correct = %0d Num of Error= %0d",$time,correct_count,error_count);
+        $display("%t:Num of Correct Reset = %0d Num of Error Reset= %0d",$time,correct_reset,error_reset);
+        $stop;
+
+    end
+
+    task golden_model ( input logic g_rst,g_write, [15:0] g_data_in,config_reg_e g_address,
+                        output logic [15:0] g_data_out);
+         //config_reg_1               
+        if (g_rst) begin
+            address = address.first();
+            for (int i = 0; i < address.num; i++) begin
+                reg_assoc [address] = reset_assoc[address];
+                address = address.next();
+            end
+        //config_reg_2
+        end else begin
+            if (g_write) begin
+                reg_assoc [g_address] = g_data_in;
+            end 
+        end
+        //config_reg_3
+        g_data_out = reg_assoc[g_address];
+    endtask 
+
+    task check_result(input logic ch_rst,ch_write, [15:0] ch_data_in,config_reg_e ch_address);
+        logic [15:0] ch_out;
+        golden_model(ch_rst,ch_write,ch_data_in,ch_address,ch_out);
+        @(negedge clk);
+        if(!ch_rst) begin
+            //config_reg_3
+            if (ch_out == data_out) begin
+                $display("corect golden ch_out =%h , data_out=%h , data_in =%h ",ch_out,data_out,data_in);
+                $display("corect golden address=%s , write=%h ",address,write);
+                correct_count++;
+            end else begin
+                $display("Error golden ch_out =%h , data_out=%h  , data_in =%h ",ch_out,data_out,data_in);
+                $display("Error golden address=%s  , write=%h ",address,write);
+                error_count++;
+            end
+        end else begin
+            check_reset();
+        end
+        
+    endtask
+
+    task assert_reset;
+        reset = 1'b1;
+        check_reset();
+        reset = 1'b0;
+    endtask 
+
+    //config_reg_1
+    task check_reset;
+        logic [15:0] check_reset_value;
+        address = address.first();
+            for (int i = 0; i < address.num; i++) begin
+                @(negedge clk);
+                check_reset_value = data_out - reset_assoc[address];
+                if( check_reset_value == 16'h0 ) begin
+                    correct_reset++;
+                    $display(" Reset value of is correct data_out=%h ",data_out);
+                end else begin
+                    error_reset++;
+                    $display("Rset False the difference is %h data_out=%h ",check_reset_value,data_out);
+                end
+                address = address.next();
+            end
+    endtask
+   
+endmodule
