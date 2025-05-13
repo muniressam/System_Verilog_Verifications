@@ -1,0 +1,125 @@
+C:/intelFPGA/ver_diploma/5th_assignment/shift_register/sequencer.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/sequencer.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package sequencer_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/sequencer.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package seq_item_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/main_seq.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/main_seq.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package main_seq_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/main_seq.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package seq_item_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_drv.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_drv.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package shift_reg_drv_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_drv.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package seq_item_pkg
+-- Importing package config_obj_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/config_obj.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/config_obj.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package config_obj_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/config_obj.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_test.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_test.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package shift_reg_test_pkg
+-- Importing package shift_reg_env_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package shift_reg_drv_pkg
+-- Importing package seq_item_pkg
+-- Importing package config_obj_pkg
+-- Importing package sequencer_pkg
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_test.sv(11): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package main_seq_pkg
+-- Importing package reset_seq_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_monitor.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_monitor.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/top.sv {2 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/top.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/top.sv(9): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Warning: C:/intelFPGA/ver_diploma/5th_assignment/shift_register/top.sv(8): (vlog-13233) Design unit "top_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package shift_reg_test_pkg
+-- Importing package shift_reg_env_pkg
+-- Importing package shift_reg_drv_pkg
+-- Importing package seq_item_pkg
+-- Importing package config_obj_pkg
+-- Importing package sequencer_pkg
+-- Importing package main_seq_pkg
+-- Importing package reset_seq_pkg
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/reset_seq.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/reset_seq.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package reset_seq_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/reset_seq.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package seq_item_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_env.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_env.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package shift_reg_env_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_env.sv(10): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package shift_reg_drv_pkg
+-- Importing package seq_item_pkg
+-- Importing package config_obj_pkg
+-- Importing package sequencer_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/seq_item.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/seq_item.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package seq_item_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) C:/intelFPGA/ver_diploma/5th_assignment/shift_register/seq_item.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg.v {1 {vlog -work work -vopt -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module shift_reg
+
+Top level modules:
+	shift_reg
+
+} {} {}} C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_if.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/5th_assignment/shift_register/shift_reg_if.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling interface shift_reg_if
+
+Top level modules:
+	--none--
+
+} {} {}}

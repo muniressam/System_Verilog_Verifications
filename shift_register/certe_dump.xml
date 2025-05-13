@@ -1,0 +1,39 @@
+<certe_dump>
+  <instance type=" shift_reg_test "> 
+     uvm_test_top 
+  
+     <instance type=" shift_reg_env "> 
+        env 
+  
+        <instance type=" shift_reg_drv "> 
+           driver 
+  
+           <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
+              rsp_port 
+           </port> 
+  
+           <port if_type = "uvm_seq_item_pull_port" txn_type = "anonymous"> 
+              seq_item_port 
+              <connection>  uvm_test_top.env.sqr.seq_item_export  </connection> 
+           </port> 
+        </instance> 
+  
+  
+        <instance type=" shift_reg_sequencer "> 
+           sqr 
+  
+           <export if_type = "uvm_analysis_export" txn_type = "anonymous"> 
+              rsp_export 
+              <connection>  uvm_test_top.env.sqr.sqr_rsp_analysis_fifo.analysis_export  </connection> 
+           </export> 
+  
+           <imp if_type = "uvm_seq_item_pull_imp" txn_type = "anonymous"> 
+              seq_item_export 
+           </imp> 
+        </instance> 
+  
+     </instance> 
+  
+  </instance> 
+  
+  </certe_dump>
