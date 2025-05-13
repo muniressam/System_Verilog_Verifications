@@ -1,0 +1,262 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/ver_diploma/second_assignment_extra/ALU
+T_opt
+!s110 1742418233
+VdIM<]Ga2[K0DBh@`9N^lm1
+04 10 4 work FSM_010_TB fast 0
+=1-c8f7501db222-67db3139-1d8-417c
+Z2 !s124 OEM100
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1742398244
+V<AcUkZcmd;1VVmao<3Ud`0
+04 12 4 work FSM_010_TB_2 fast 0
+=4-c8f7501db222-67dae324-4a-4ea8
+R2
+R3
+R4
+n@_opt1
+R5
+R1
+vFSM_010
+Z6 !s110 1742418320
+!i10b 1
+!s100 Q5bZ28b_YDP649Q^1J<QB1
+IWSj9=;aflZWcXTM3JQ=]C1
+Z7 dC:/intelFPGA/ver_diploma/second_assignment_extra/FSM
+w1741722494
+8FSM_010.v
+FFSM_010.v
+!i122 89
+L0 8 60
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z10 !s108 1742418320.000000
+!s107 FSM_010_TB.sv|const.sv|FSM_010.v|
+Z11 !s90 -reportprogress|300|FSM_010.v|const.sv|FSM_010_TB.sv|+cover|-covercells|
+!i113 0
+Z12 !s102 +cover -covercells
+Z13 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@f@s@m_010
+vFSM_010_TB
+Z14 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z15 DXx4 work 7 FSM_pkg 0 22 bYgCUcX[[Wg@a<9o:V5C@2
+DXx4 work 18 FSM_010_TB_sv_unit 0 22 Z_Bi`6_aE6340<VNT>CbC1
+R6
+R8
+r1
+!s85 0
+!i10b 1
+!s100 TC1`ZI8a9D=dVMC39>0;;0
+Ia124oSfTYD1_JV>egHC?^3
+!s105 FSM_010_TB_sv_unit
+S1
+R7
+Z16 w1742416933
+Z17 8FSM_010_TB.sv
+Z18 FFSM_010_TB.sv
+!i122 89
+L0 2 120
+R9
+31
+R10
+Z19 !s107 FSM_010_TB.sv|const.sv|FSM_010.v|
+R11
+!i113 0
+R12
+R13
+R4
+n@f@s@m_010_@t@b
+vFSM_010_TB_2
+R14
+Z20 DXx4 work 7 FSM_pkg 0 22 JAOmVFlaW;R1M`Hzn1IZ=1
+DXx4 work 20 FSM_010_TB_2_sv_unit 0 22 oTmAk]TKFjD>l`m]eX?1Y2
+Z21 !s110 1742398243
+R8
+r1
+!s85 0
+!i10b 1
+!s100 >XHX<LAQEKf5EkU14n_IN0
+InLCeKh][2J1=:kbf8Gl_90
+!s105 FSM_010_TB_2_sv_unit
+S1
+R7
+Z22 w1742398073
+Z23 8FSM_010_TB_2.sv
+Z24 FFSM_010_TB_2.sv
+!i122 64
+L0 2 61
+R9
+31
+Z25 !s108 1742398243.000000
+Z26 !s107 FSM_010_TB_2.sv|const.sv|FSM_010.v|
+Z27 !s90 -reportprogress|300|FSM_010.v|const.sv|FSM_010_TB_2.sv|+cover|-covercells|
+!i113 0
+R12
+R13
+R4
+n@f@s@m_010_@t@b_2
+XFSM_010_TB_2_sv_unit
+R14
+R20
+R21
+VoTmAk]TKFjD>l`m]eX?1Y2
+r1
+!s85 0
+!i10b 1
+!s100 TzeIZ9Q9nLBR[RKIQ?h5C0
+IoTmAk]TKFjD>l`m]eX?1Y2
+!i103 1
+S1
+R7
+R22
+R23
+R24
+!i122 64
+Z28 L0 1 0
+R9
+31
+R25
+R26
+R27
+!i113 0
+R12
+R13
+R4
+n@f@s@m_010_@t@b_2_sv_unit
+XFSM_010_TB_sv_unit
+R14
+R15
+R6
+VZ_Bi`6_aE6340<VNT>CbC1
+r1
+!s85 0
+!i10b 1
+!s100 mb;zTzk=7568PC:58J_Rz1
+IZ_Bi`6_aE6340<VNT>CbC1
+!i103 1
+S1
+R7
+R16
+R17
+R18
+!i122 89
+R28
+R9
+31
+R10
+R19
+R11
+!i113 0
+R12
+R13
+R4
+n@f@s@m_010_@t@b_sv_unit
+XFSM_pkg
+R14
+R6
+!i10b 1
+!s100 ez5]>D1L^7gdLD4C;8<GX3
+IbYgCUcX[[Wg@a<9o:V5C@2
+S1
+R7
+w1742418217
+8const.sv
+Fconst.sv
+!i122 89
+R28
+VbYgCUcX[[Wg@a<9o:V5C@2
+R9
+r1
+!s85 0
+31
+R10
+R19
+R11
+!i113 0
+R12
+R13
+R4
+n@f@s@m_pkg
+vgolden_model
+R14
+!s110 1742398236
+!i10b 1
+!s100 18a2f>lk;48z0m0Eno:8J1
+Ic8z[B_:8a=fEYdcP`@>W63
+S1
+R7
+w1742398227
+8C:/intelFPGA/ver_diploma/second_assignment_extra/FSM/golden_model.sv
+FC:/intelFPGA/ver_diploma/second_assignment_extra/FSM/golden_model.sv
+!i122 63
+L0 1 62
+R8
+R9
+r1
+!s85 0
+31
+!s108 1742398236.000000
+!s107 C:/intelFPGA/ver_diploma/second_assignment_extra/FSM/golden_model.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/intelFPGA/ver_diploma/second_assignment_extra/FSM/golden_model.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
