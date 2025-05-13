@@ -1,0 +1,119 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/ver_diploma/first_assignment
+T_opt
+!s110 1741099656
+VQdFg3lGlgnQXhe^N7RWK[2
+Z2 04 15 4 work priority_enc_tb fast 0
+=1-c8f7501db222-67c71287-209-5624
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1741017136
+V3elM58i@A=icK<F6kU9HG3
+R2
+=1-c8f7501db222-67c5d030-af-2304
+R3
+o-quiet -auto_acc_if_foreign -work work
+R5
+n@_opt1
+R6
+R1
+T_opt2
+!s110 1745323583
+Vd=R:JPVIDeL^1KOiebP0d3
+R2
+=1-c8f7501db222-6807863f-1ae-6dd4
+R3
+R4
+R5
+n@_opt2
+R6
+vpriority_enc
+Z7 !s110 1745323582
+!i10b 1
+!s100 ga23F1S8zSWg9R`@iVEnS1
+I8GP1>PU;g60fah2lXgj5D2
+Z8 dC:/intelFPGA/ver_diploma/fourth_assignment_extra/encoder
+w1745316279
+8priority_enc.v
+Fpriority_enc.v
+!i122 62
+L0 1 24
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z11 !s108 1745323582.000000
+Z12 !s107 priority_enc_tb.sv|priority_enc.v|
+Z13 !s90 -reportprogress|300|priority_enc.v|priority_enc_tb.sv|+cover|-covercells|
+!i113 0
+Z14 !s102 +cover -covercells
+Z15 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vpriority_enc_tb
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R7
+!i10b 1
+!s100 P7EVeMO@hHk0Ol2>YSOUL3
+I=adEc4JPmz329fXR5;iMk2
+S1
+R8
+w1745323315
+8priority_enc_tb.sv
+Fpriority_enc_tb.sv
+!i122 62
+L0 1 89
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R5

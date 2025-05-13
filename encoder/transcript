@@ -1,0 +1,47 @@
+# vsim -c -do "run -all" priority_enc_tb 
+# Start time: 22:27:13 on Mar 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.priority_enc_tb(fast)
+# Loading work.priority_enc(fast)
+# run -all
+# AT                    2 TEST IS PASSED INPUT D = 0000 , OUTPUT Y = 0 WITH valid = 0  
+# AT                    4 Error, TEST IS FAILD INPUT D = 0000 , OUTPUT Y = x WITH valid = 0  
+# AT                    6 TEST IS PASSED INPUT D = 0001 , OUTPUT Y = 3 WITH valid = 1  
+# AT                    8 TEST IS PASSED INPUT D = 0010 , OUTPUT Y = 2 WITH valid = 1  
+# AT                   10 TEST IS PASSED INPUT D = 0011 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   12 TEST IS PASSED INPUT D = 0100 , OUTPUT Y = 1 WITH valid = 1  
+# AT                   14 TEST IS PASSED INPUT D = 0101 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   16 TEST IS PASSED INPUT D = 0110 , OUTPUT Y = 2 WITH valid = 1  
+# AT                   18 TEST IS PASSED INPUT D = 0111 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   20 TEST IS PASSED INPUT D = 1000 , OUTPUT Y = 0 WITH valid = 1  
+# AT                   22 TEST IS PASSED INPUT D = 1001 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   24 TEST IS PASSED INPUT D = 1010 , OUTPUT Y = 2 WITH valid = 1  
+# AT                   26 TEST IS PASSED INPUT D = 1011 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   28 TEST IS PASSED INPUT D = 1100 , OUTPUT Y = 1 WITH valid = 1  
+# AT                   30 TEST IS PASSED INPUT D = 1101 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   32 TEST IS PASSED INPUT D = 1110 , OUTPUT Y = 2 WITH valid = 1  
+# AT                   34 TEST IS PASSED INPUT D = 1111 , OUTPUT Y = 3 WITH valid = 1  
+# AT                   36 Error, TEST IS FAILD INPUT D = 0000 , OUTPUT Y = x WITH valid = 0  
+# AT                   38 TEST IS PASSED INPUT D = 0000 , OUTPUT Y = 0 WITH valid = 0  
+#                   38:Num of Correct = 17 Num of Error= 2
+# ** Note: $stop    : priority_enc_tb.sv(45)
+#    Time: 38 ns  Iteration: 1  Instance: /priority_enc_tb
+# Break at priority_enc_tb.sv line 45
+# Stopped at priority_enc_tb.sv line 45
+# End time: 22:28:04 on Mar 03,2025, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 0
