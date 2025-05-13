@@ -1,0 +1,272 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/ver_diploma/third_assignment/ALSU
+T_opt
+!s110 1742844469
+VRO0jA[l[X20gRBUOgWi]73
+Z2 04 7 4 work ALSU_tb fast 0
+=1-c8f7501db222-67e1b234-3d6-4b88
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1745111306
+V<IS^5glYe0@j:jN@PbllJ0
+R2
+=1-c8f7501db222-68044909-3c9-6080
+R3
+R4
+R5
+n@_opt1
+R6
+T_opt2
+!s110 1742849707
+V2TFf8LNX4l@AihoXLA1^P2
+R2
+=1-c8f7501db222-67e1c6ab-259-34a8
+R3
+o-quiet -auto_acc_if_foreign -work work
+R5
+n@_opt2
+R6
+R1
+vALSU
+Z7 !s110 1745111305
+!i10b 1
+!s100 H88JE[5D1TUlPDEMnYA[o1
+IFnlgFkX0MfB?8=;Md3b2i3
+Z8 dC:/intelFPGA/ver_diploma/fourth_assignment/ALSU
+w1742224419
+8ALSU.v
+FALSU.v
+!i122 191
+L0 1 121
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z11 !s108 1745111305.000000
+Z12 !s107 ALSU_tb.sv|ALSU_golden.sv|const.sv|ALSU.v|
+Z13 !s90 -reportprogress|300|ALSU.v|const.sv|ALSU_golden.sv|ALSU_tb.sv|+cover|-covercells|
+!i113 0
+Z14 !s102 +cover -covercells
+Z15 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+n@a@l@s@u
+vALSU_golden
+Z16 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R7
+!i10b 1
+!s100 Fa^J3zP1kPnI2^T`ZA?4e2
+I=WRV>oB3KPbjek??hY1UC1
+S1
+R8
+w1742419928
+8ALSU_golden.sv
+FALSU_golden.sv
+!i122 191
+L0 1 127
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R5
+n@a@l@s@u_golden
+XALSU_pkt
+R16
+R7
+!i10b 1
+!s100 RM`Gf]32S<HNb:0lka;Ye2
+IP=F<bAgkU8d<DeAF;4FF23
+S1
+R8
+w1745104930
+8const.sv
+Fconst.sv
+!i122 191
+Z17 L0 1 0
+VP=F<bAgkU8d<DeAF;4FF23
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R5
+n@a@l@s@u_pkt
+vALSU_tb
+R16
+Z18 DXx4 work 8 ALSU_pkt 0 22 P=F<bAgkU8d<DeAF;4FF23
+DXx4 work 15 ALSU_tb_sv_unit 0 22 Z]EnA:ZZ_gljKiamDo8P20
+R7
+R9
+r1
+!s85 0
+!i10b 1
+!s100 =>JgJ_D;HoB[Rf;7z];MO3
+I83LgG;:dTW4=K5h]I^Gbe3
+!s105 ALSU_tb_sv_unit
+S1
+R8
+Z19 w1742916594
+Z20 8ALSU_tb.sv
+Z21 FALSU_tb.sv
+!i122 191
+L0 2 127
+R10
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R5
+n@a@l@s@u_tb
+XALSU_tb_sv_unit
+R16
+R18
+R7
+VZ]EnA:ZZ_gljKiamDo8P20
+r1
+!s85 0
+!i10b 1
+!s100 cOOYG8K_1N_?4jElL;Kl52
+IZ]EnA:ZZ_gljKiamDo8P20
+!i103 1
+S1
+R8
+R19
+R20
+R21
+!i122 191
+R17
+R10
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R5
+n@a@l@s@u_tb_sv_unit

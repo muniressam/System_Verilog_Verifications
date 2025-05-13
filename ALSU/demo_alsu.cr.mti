@@ -1,0 +1,39 @@
+C:/intelFPGA/ver_diploma/third_assignment/ALSU/ALSU_golden.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/third_assignment/ALSU/ALSU_golden.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALSU_golden
+
+Top level modules:
+	ALSU_golden
+
+} {} {}} C:/intelFPGA/ver_diploma/third_assignment/ALSU/ALSU.v {1 {vlog -work work -vopt -stats=none C:/intelFPGA/ver_diploma/third_assignment/ALSU/ALSU.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALSU
+
+Top level modules:
+	ALSU
+
+} {} {}} C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU_golden.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU_golden.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALSU_golden
+
+Top level modules:
+	ALSU_golden
+
+} {} {}} C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU.v {1 {vlog -work work -vopt -stats=none C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALSU
+
+Top level modules:
+	ALSU
+
+} {} {}} C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU_tb.sv {2 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU_tb.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+** Warning: C:/intelFPGA/ver_diploma/fourth_assignment/ALSU/ALSU_tb.sv(1): (vlog-13233) Design unit "ALSU_tb_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package ALSU_tb_sv_unit
+-- Importing package ALSU_pkt
+-- Compiling module ALSU_tb
+
+Top level modules:
+	ALSU_tb
+
+} {} {}}

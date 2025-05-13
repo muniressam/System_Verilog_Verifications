@@ -1,0 +1,98 @@
+package ALSU_pkt;
+    typedef enum bit [2:0] { OR=0,XOR=1,ADD=2,MULT=3,SHIFT=4,ROTATE=5, INVALID_6=6,INVALID_7=7 } opcode_e ;
+    typedef enum {MAXPOS=3, ZERO =0, MAXNEG=-4} corner_case_e;
+    typedef enum bit [2:0] { first = 3'b001 , second = 3'b010 , third = 3'b100  } one_bit_high_e;
+    class ALSU_class;
+        rand logic rst;
+        rand logic signed [0:2] A;
+        rand logic signed [0:2] B;
+        rand logic red_op_A;
+        rand logic red_op_B;
+        rand logic bypass_A;
+        rand logic bypass_B;
+        rand logic cin;
+        rand logic direction;
+        rand logic serial_in;
+        rand opcode_e opcode;
+        rand corner_case_e corner_case;
+        rand logic signed [0:2] other;
+        rand one_bit_high_e one_bit_high;
+
+        rand opcode_e arr_opcode[6];
+
+        //Reset
+        constraint c_reset {rst dist {1:/5 ,0:/95 };}
+        //ALSU_1
+        constraint C_arth {
+            if(opcode == ADD || opcode == MULT) {
+                other == !(corner_case inside {3,0,-4});
+                A dist{corner_case:=80 , other:=20};
+                B dist{corner_case:=80 , other:=20};
+                }
+        } 
+        //ALSU_2
+        //ALSU_3
+        constraint C_read_A_B {
+            if((opcode == OR || opcode == XOR)){
+                if (red_op_A) {
+                    A dist{0:=20, one_bit_high:=80};
+                    B ==0;
+                } else if (red_op_B) {
+                    B dist{0:=20, one_bit_high:=80};
+                    A ==0;
+                } 
+            }
+        }
+        //ALSU_4
+        constraint c_opcode{
+            opcode dist{OR:=15, XOR:=15, ADD:=20, MULT:=20, SHIFT:=10, ROTATE:=10, INVALID_6:=5, INVALID_7:=5};
+        } 
+        //ALSU_5
+        constraint c_bypass{
+            bypass_A dist{1:=10, 0:=90};
+            bypass_B dist{1:=10, 0:=90};
+        }
+        constraint c_invalid_red_op_A_B{
+            if(opcode != OR || opcode != XOR){
+                red_op_A dist{0:=80, 1:=20};
+                red_op_B dist{0:=80, 1:=20};
+                }
+        } 
+        //ALSU_6
+        constraint unique_opcode{
+            foreach(arr_opcode[i]) {
+               arr_opcode[i] dist{OR:=1, XOR:=1, ADD:=1, MULT:=1, SHIFT:=1, ROTATE:=1, INVALID_6:=0, INVALID_7:=0}; 
+            }
+        }    
+
+        covergroup cvr_gp ;
+            A_cp : coverpoint A { 
+                bins A_data_0 = {0};
+                bins A_data_max = {MAXPOS};
+                bins A_data_min = {MAXNEG};
+                bins A_data_default = default;
+                bins A_data_walkingones[] = {3'b001, 3'b010, 3'b100} with (red_op_A);
+                }
+            B_cp : coverpoint B { 
+                bins B_data_0 = {0};
+                bins B_data_max = {MAXPOS};
+                bins B_data_min = {MAXNEG};
+                bins B_data_default = default;
+                bins B_data_walkingones[] = {3'b001, 3'b010, 3'b100} with (red_op_B && !red_op_A);
+                }
+            ALU_cp : coverpoint opcode { 
+                bins Bins_bitwise [] = {OR, XOR};
+                bins Bins_arith [] = {ADD, MULT};
+                bins Bins_shift [] = {SHIFT, ROTATE};
+                illegal_bins Bins_invalid = {INVALID_6,INVALID_7};
+                bins Bins_trans = (0 => 1 => 2 => 3 => 4 => 5);
+                }
+
+        endgroup
+
+        function new();
+            cvr_gp = new(); 
+        endfunction
+
+    endclass
+endpackage
